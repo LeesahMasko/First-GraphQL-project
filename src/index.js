@@ -34,4 +34,5 @@ ReactDOM.render(
   </ApolloProvider>,
   document.getElementById('root')
 );
-serviceWorker.unregister();
+serviceWorker.unregister()
+
