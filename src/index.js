@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './components/App';
-import * as serviceWorker from './serviceWorker';
+//import * as serviceWorker from './serviceWorker';
 
 //1
 
@@ -34,5 +34,5 @@ ReactDOM.render(
   </ApolloProvider>,
   document.getElementById('root')
 );
-serviceWorker.unregister()
+//serviceWorker.unregister()
 
