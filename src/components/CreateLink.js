@@ -1,4 +1,18 @@
 import React, { useState } from 'react';
+import { useMutation, gql } from '@apollo/client';
+
+const CREATE_LINK_MUTATION = gql`
+  mutation PostMutation(
+    $description: String!
+    $url: String!
+  ) {
+    post(description: $description, url: $url) {
+      id
+      url
+      description
+    }
+  }
+`;
 
 const CreateLink = () => {
   const [formState, setFormState] = useState({
