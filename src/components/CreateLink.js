@@ -19,6 +19,12 @@ const CreateLink = () => {
     description: '',
     url: ''
   });
+  const [createLink] = useMutation(CREATE_LINK_MUTATION, {
+      variables: {
+          description: formState.description,
+          url: formState.url
+      }
+  });
 
 
   return (
@@ -26,6 +32,7 @@ const CreateLink = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          createLink();
         }}
       >
         <div className="flex flex-column mt3">
