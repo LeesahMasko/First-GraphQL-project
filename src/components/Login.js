@@ -82,7 +82,7 @@ const LOGIN_MUTATION = gql`
       <div className="flex mt3">
         <button
           className="pointer mr2 button"
-          onClick={() => console.log('onClick')}
+          onClick={formState.login ? login : signup}
         >
           {formState.login ? 'login' : 'create account'}
         </button>
